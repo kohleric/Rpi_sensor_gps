@@ -27,6 +27,7 @@ bmp280 = BMP280(i2c_dev=bus)
 bus = smbus.SMBus(1)
 
 while True:
+    print(time.time())
     result = sgp30.get_air_quality()
     print(result)
     temperature = bmp280.get_temperature()
