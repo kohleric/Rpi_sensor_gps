@@ -25,6 +25,7 @@ sys.stdout.write('\n')
 bus = SMBus(1)
 bmp280 = BMP280(i2c_dev=bus)
 bus = smbus.SMBus(1)
+config = [0x08, 0x00]
 #plt.text(0.5, 0.5, 'T P CO2 COV HR T', horizontalalignment='center',verticalalignment='center')
 while True:
     #plt.close()
@@ -37,7 +38,6 @@ while True:
     pressure = bmp280.get_pressure()
     print(f"{temperature:05.2f}*C {pressure:05.2f}hPa")
     #plt.text(0.1, 0.5, f"{temperature:05.2f}*C {pressure:05.2f}hPa")#•, horizontalalignment='center',verticalalignment='center')
-    config = [0x08, 0x00]
     bus.write_i2c_block_data(0x38, 0xE1, config)
     time.sleep(0.5)
     byt = bus.read_byte(0x38)
