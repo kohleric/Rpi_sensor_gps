@@ -17,7 +17,7 @@ import smbus
 
 today = time.strftime("%Y-%m-%d")
 
-data_dir = 'data_PiMobile'
+data_dir = '../data_PiMobile'
 
 today_dir = os.path.join(data_dir, today)
 
