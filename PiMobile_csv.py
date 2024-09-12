@@ -80,6 +80,7 @@ while True:
     ctmp = int(tmp * 100 / 1048576)
     #plt.text(0.1, 0.4, u'Humidity: {0}%'.format(ctmp))
     #print(u'Humidity: {0}%'.format(ctmp))
+    result[TemperatureBMP280]=f"{temperature:05.2f}*C
     
     with open(csv_file, mode='a', newline='') as file:
         writer = csv.writer(file)
