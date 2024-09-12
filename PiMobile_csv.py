@@ -24,13 +24,13 @@ today_dir = os.path.join(data_dir, today)
 if not os.path.exists(data_dir):
     #print(f"Le répertoire '{data_dir}' n'existe pas. Création...")
     os.makedirs(data_dir)
-else:
+#else:
     #print(f"Le répertoire '{data_dir}' existe déjà.")
 
 if not os.path.exists(today_dir):
     #print(f"Le répertoire '{today_dir}' n'existe pas. Création...")
     os.makedirs(today_dir)
-else:
+#else:
     #print(f"Le répertoire '{today_dir}' existe déjà.")
 
 
