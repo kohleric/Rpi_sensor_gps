@@ -84,7 +84,7 @@ while True:
     with open(csv_file, mode='a', newline='') as file:
         writer = csv.writer(file)
         
-        writer.writerow([timestamp, result])
+        writer.writerow([timestamp, result, f"{temperature:05.2f}*C {pressure:05.2f}hPa", u'Temperature: {0:.1f}°C'.format(ctemp), u'Humidity: {0}%'.format(ctmp)])
     
     #print(f"Données enregistrées : {timestamp}, {result}")
     
